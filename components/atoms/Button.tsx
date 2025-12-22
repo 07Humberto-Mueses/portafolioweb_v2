@@ -24,7 +24,7 @@ export default function Button({
 }: CustomButtonProps) {
   const baseClasses =
     `maven-pro inline-flex items-center justify-center 
-     font-bold px-6 py-3 rounded-xl
+     font-bold px-2 py-1 rounded-xl
      border-none outline-none apparance-none 
      transition-all duration-300 ease-in-out
      hover:scale-105 hover:shadow-xl active:scale-95

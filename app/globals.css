@@ -2,23 +2,14 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-:root {
-  --background: #C6C7C0;
-  --foreground: #131313;
-}
+:root { 
+  --background: #C6C7C0; 
+  --foreground: #131313; 
+} 
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #131313;
-    --foreground: #C6C7C0;
-  }
+.dark { 
+  --background: #131313; 
+  --foreground: #C6C7C0; 
 }
 
 .irish-grover-regular {
@@ -35,7 +26,7 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: "Irish Grover", Arial, Helvetica, sans-serif;
+  background-color: var(--background); 
+  color: var(--foreground);
 }

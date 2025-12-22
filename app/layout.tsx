@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/organisms/Footer";
+import ThemeToggle from "@/components/molecules/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body>
-        {children}
+      <body className="transition-colors duration-300">
+        <div className="bg-[#C6C7C0] dark:bg-[#131313] flex justify-end p-4">
+          <ThemeToggle/>
+        </div>
+        <main className="min-h-screen flex flex-col">
+          {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   );
