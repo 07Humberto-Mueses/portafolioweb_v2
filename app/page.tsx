@@ -3,9 +3,9 @@ import { FlechaIcon } from "@/components/icons/Icons";
 
 export default function Home() {
   return (
-    <div className="bg-[#C6C7C0] dark:bg-[#131313] h-screen flex flex-col items-center justify-center gap-6 px-4">
+    <div className="h-screen flex flex-col items-center justify-center gap-6 px-4">
         <div className="text-center space-y-1">
-          <h1 className="irish-grover-regular text-6xl md:text-6xl text-[#131313] dark:text-[#FFFFFF]">
+          <h1 className="text-[#131313] dark:text-[#FFFFFF] irish-grover-regular text-6xl md:text-6xl">
             HUMBERTO MUESES
           </h1>
           <h2 className="text-xl md:text-4xl text-[#131313] dark:text-[#FFFFFF]">

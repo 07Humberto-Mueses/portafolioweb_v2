@@ -1,0 +1,6 @@
+[
+    { "name": "SOBRE MÍ", "path": "/sobreMi" },
+    { "name": "PROYECTOS", "path": "/proyectos" },
+    { "name": "EXPERIENCIA PROFESIONAL", "path": "/experiencia" },
+    { "name": "EDUCACIÓN", "path": "/educacion" }
+]

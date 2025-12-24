@@ -10,11 +10,12 @@ const footerButtons = [
 
 export default function Footer() {
     return (
-        <footer className="fixed inset-x-0 bottom-0 w-full">
+        <div>
             <div className="m-3">
-                <Button text="ES" icon={DownIcon} bgColor="bg-[#131313] dark:bg-[#D9D9D9]" textColor="bg-[#FFFFFF] dark:text-[#28251F]" />
+                <Button text="ES" icon={DownIcon} bgColor="bg-[#131313] dark:bg-[#D9D9D9]" textColor="text-[#FFFFFF] dark:text-[#28251F]" />
             </div>
-            <div className="bg-[#131313] dark:bg-[#C6C7C0] flex justify-center items-center gap-10 py-2">
+            <footer className="fixed inset-x-0 bottom-0 w-full bg-[#131313] dark:bg-[#C6C7C0]">
+            <div className="flex justify-center items-center gap-10 py-2">
                 {footerButtons.map((button, index) => (
                     <Button
                         key={index}
@@ -25,5 +26,6 @@ export default function Footer() {
                 ))}
             </div>
         </footer>
+        </div>
     )
 }

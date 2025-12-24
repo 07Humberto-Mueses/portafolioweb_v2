@@ -24,7 +24,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="flex justify-end p-4 rounded bg-[#C6C7C0] dark:bg-[#131313] text-[#131313] dark:text-[#C6C7C0]"
+      className="fixed top-4 right-4 z-50 p-2 text-[#131313] dark:text-[#C6C7C0] shadow-md"
     >
       {darkMode ? SunIcon : MoonIcon}
     </button>

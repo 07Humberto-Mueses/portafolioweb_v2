@@ -8,7 +8,7 @@ export default function Layout({
     return (
         <div>
             <Header />
-            <main className="min-h-screen flex flex-col">
+            <main className="pt-24 pb-16 flex items-center justify-center min-h-screen">
                 {children}
             </main>
         </div>

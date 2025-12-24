@@ -16,10 +16,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className="transition-colors duration-300">
-        <div className="bg-[#C6C7C0] dark:bg-[#131313] flex justify-end p-4">
+        <div className="flex justify-end p-4">
           <ThemeToggle/>
         </div>
-        <main className="min-h-screen flex flex-col">
+        <main className="flex items-center flex-col">
           {children}
         </main>
         <Footer/>
