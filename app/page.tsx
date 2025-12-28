@@ -1,4 +1,5 @@
 import Button from "@/components/atoms/Button";
+import Text from "@/components/atoms/Text";
 import { FlechaIcon } from "@/components/icons/Icons";
 
 export default function Home() {
@@ -13,9 +14,9 @@ export default function Home() {
           </h2>
         </div>
         <div className="text-center max-w-2xl">
-          <p className="maven-pro text-base md:text-xl text-[#28251F] dark:text-[#C6C7C0] leading-snug">
+          <Text>
             “Nacido en Nariño, Colombia. Apasionado por el fútbol y el desarrollo backend, disfruto crear aplicaciones web funcionales que resuelvan problemas. Me definen la curiosidad, la perseverancia y las ganas de construir tecnología con propósito.”
-          </p>
+          </Text>
         </div>
         <div className="text-center">
           <Button

@@ -4,12 +4,10 @@
 
 :root { 
   --background: #C6C7C0; 
-  --foreground: #131313; 
 } 
 
 .dark { 
   --background: #131313; 
-  --foreground: #C6C7C0; 
 }
 
 .irish-grover-regular {
@@ -27,6 +25,6 @@
 
 body {
   font-family: "Irish Grover", Arial, Helvetica, sans-serif;
-  background-color: var(--background); 
-  color: var(--foreground);
+  background-color: var(--background);
+  transition: background-color 0.3s ease;
 }

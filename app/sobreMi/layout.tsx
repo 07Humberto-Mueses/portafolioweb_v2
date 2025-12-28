@@ -8,7 +8,7 @@ export default function Layout({
     return (
         <div>
             <Header />
-            <main className="pt-24 pb-16 flex items-center justify-center min-h-screen">
+            <main className="bg-[#C6C7C0] dark:bg-[#131313] pt-24 pb-16 flex items-center justify-center min-h-screen">
                 {children}
             </main>
         </div>

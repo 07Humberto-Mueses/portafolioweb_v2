@@ -4,26 +4,25 @@ import Image from "next/image";
 import Link from "next/link";
 import menuData from "@/data/menu.json";
 import { usePathname } from "next/navigation";
-import Button from "../atoms/Button";
 
 export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-[#C6C7C0] dark:bg-[#28251F] fixed inset-x-0 top-0 w-full flex items-center justify-between px-6 py-2">
+        <header className="bg-[#FFFFFF] dark:bg-[#28251F] fixed inset-x-0 top-0 w-full flex items-center justify-between px-6 py-2">
             <Link href="/">
                 <Image
                     src="/logo.png"
                     alt="Logo"
-                    width={100}
-                    height={100}
+                    width={70}
+                    height={70}
                     className="m-3 dark:hidden"
                 />
                 <Image
                     src="/logo.png"
                     alt="Logo Oscuro"
-                    width={100}
-                    height={100}
+                    width={70}
+                    height={70}
                     className="m-3 hidden dark:block"
                 />
             </Link>

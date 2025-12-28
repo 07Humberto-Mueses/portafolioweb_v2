@@ -19,7 +19,7 @@ export default function RootLayout({
         <div className="flex justify-end p-4">
           <ThemeToggle/>
         </div>
-        <main className="flex items-center flex-col">
+        <main className="bg-[#C6C7C0] dark:bg-[#131313] flex items-center flex-col">
           {children}
         </main>
         <Footer/>
