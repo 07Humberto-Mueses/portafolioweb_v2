@@ -1,0 +1,90 @@
+[
+    {
+        "titulo": "Calculadora",
+        "imagen": "/proyectos/basico/Calculadora.png",
+        "galeria": [
+            "/proyectos/basico/Calculadora1.png",
+            "/proyectos/basico/Calculadora2.png"
+        ],
+        "descripcion": "Una calculadora básica desarrollada con HTML, CSS y JavaScript que permite realizar operaciones aritméticas simples como suma, resta, multiplicación y división.",
+        "proposito": "El propósito de este proyecto es practicar la manipulación del DOM y la lógica de programación en JavaScript, así como mejorar las habilidades en diseño web utilizando HTML y CSS.",
+        "funcionamiento": "La calculadora cuenta con una interfaz sencilla donde los usuarios pueden ingresar números y seleccionar operaciones. Al presionar el botón de igual, se muestra el resultado de la operación en pantalla.",
+        "tecnologias": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "titulo": "Presupuesto",
+        "imagen": "/proyectos/basico/Presupuesto.png",
+        "galeria": [
+            "/proyectos/basico/Presupuesto1.png",
+            "/proyectos/basico/Presupuesto2.png",
+            "/proyectos/basico/Presupuesto3.png"
+        ],
+        "descripcion": "Una aplicación de presupuesto personal desarrollada con HTML, CSS y JavaScript que permite a los usuarios registrar ingresos y gastos, y calcular su balance financiero.",
+        "proposito": "El propósito de este proyecto es ayudar a los usuarios a gestionar sus finanzas personales de manera efectiva, proporcionando una herramienta sencilla para el seguimiento de ingresos y gastos.",
+        "funcionamiento": "La aplicación permite a los usuarios registrar ingresos y gastos, visualizar su balance financiero y mantener un control detallado de sus finanzas personales.",
+        "tecnologias": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "titulo": "Local de Ropa",
+        "imagen": "/proyectos/basico/Local.png",
+        "galeria": [
+            "/proyectos/basico/Local1.png",
+            "/proyectos/basico/Local2.png",
+            "/proyectos/basico/Local3.png"
+        ],
+        "descripcion": "Un sitio web para el administrador de un local de ropa con el objetivo de manejar el inventario de los productos y registrar las ventas de la mercancia.",
+        "proposito": "El propósito de este proyecto es crear una web para un local de ropa, facilitando a los administradores la gestión de productos y la realización de ventas.",
+        "funcionamiento": "La aplicación permite a los usuarios visualizar y manejar el inventario de productos y registrar compras.",
+        "tecnologias": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "titulo": "Conversor de Temperatura",
+        "imagen": "/proyectos/basico/Conversor.png",
+        "galeria": [
+            "/proyectos/basico/Conversor1.png",
+            "/proyectos/basico/Conversor2.png",
+            "/proyectos/basico/Conversor3.png"
+        ],
+        "descripcion": "Un conversor de temperatura que permite convertir entre grados Centigrados, Fahrenheit y Kelvin.",
+        "proposito": "El propósito de este proyecto es practicar la manipulación del DOM y la lógica de programación en JavaScript, así como mejorar las habilidades en diseño web utilizando HTML y CSS.",
+        "funcionamiento": "La aplicación permite a los usuarios ingresar una temperatura en una unidad específica y convertirla a las otras tres unidades.",
+        "tecnologias": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Vite"
+        ]
+    },
+    {
+        "titulo": "Portafolio Personal",
+        "imagen": "/proyectos/basico/Portafolio.png",
+        "galeria": [
+            "/proyectos/basico/Portafolio1.png",
+            "/proyectos/basico/Portafolio2.png",
+            "/proyectos/basico/Portafolio3.png"
+        ],
+        "descripcion": "Un proyecto para mostrar mi portafolio personal, destacando mis habilidades, proyectos y experiencia hasta el momento.",
+        "proposito": "El propósito de este proyecto es practicar el uso y el potencial que tienen los frameworks pero aún del lado de los conceptos básicos de HTML, CSS y JavaScript.",
+        "funcionamiento": "La pagina muestra diferentes secciones como 'Sobre mí', 'Habilidades', 'Proyectos' y 'Contacto', permitiendo a los visitantes conocer más sobre mi perfil profesional.",
+        "tecnologias": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Astro"
+        ]
+    }
+]
