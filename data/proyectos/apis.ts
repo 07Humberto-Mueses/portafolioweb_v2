@@ -1,10 +1,10 @@
-[
+export const proyectoApis = [
     {
         "titulo": "Gif Expert",
-        "imagen": "/proyectos/framework/Gif.png",
+        "imagen": ["/proyectos/apis/Gif.png"],
         "galeria": [
-            "/proyectos/framework/Gif1.png",
-            "/proyectos/framework/Gif2.png"
+            "/proyectos/apis/Gif1.png",
+            "/proyectos/apis/Gif2.png"
         ],
         "descripcion": "Una pagina web que permite buscar y visualizar GIFs utilizando la API de Giphy, desarrollada con React y Vite.",
         "proposito": "El propósito de este proyecto es aprender a consumir APIs externas y manejar el estado en una aplicación React utilizando Vite como herramienta de construcción.",
@@ -18,11 +18,11 @@
     },
     {
         "titulo": "Heroes App",
-        "imagen": "/proyectos/framework/Heroes.png",
+        "imagen": ["/proyectos/apis/Heroes.png"],
         "galeria": [
-            "/proyectos/framework/Heroes1.png",
-            "/proyectos/framework/Heroes2.png",
-            "/proyectos/framework/Heroes3.png"
+            "/proyectos/apis/Heroes1.png",
+            "/proyectos/apis/Heroes2.png",
+            "/proyectos/apis/Heroes3.png"
         ],
         "descripcion": "Este proyecto es una aplicación web que permite buscar y visualizar imagenes de tipo gif gracias a la API de Giphy, desarrollada con React y Vite.",
         "proposito": "El consumo de APIs externas y el manejo del estado en una aplicación React utilizando Vite como herramienta de construcción, en esta oportunidad con una interfaz mejor elaborada y organizada",
@@ -37,10 +37,10 @@
     },
     {
         "titulo": "Anime Vault",
-        "imagen": "/proyectos/framework/Anime.png",
+        "imagen": ["/proyectos/apis/Anime.png"],
         "galeria": [
-            "/proyectos/framework/Anime1.png",
-            "/proyectos/framework/Anime2.png"            
+            "/proyectos/apis/Anime1.png",
+            "/proyectos/apis/Anime2.png"            
         ],
         "descripcion": "Esta pagina muestra tarjetas de animes populares consumiendo una API, desarrollada con React y NextJs.",
         "proposito": "El propósito de este proyecto es aprender a consumir APIs externas y manejar el estado en una aplicación React utilizando NextJs como framework de construcción.",
@@ -54,11 +54,11 @@
     },
     {
         "titulo": "Peliculas",
-        "imagen": "/proyectos/framework/Pelicula.png",
+        "imagen": ["/proyectos/apis/Pelicula.png"],
         "galeria": [
-            "/proyectos/framework/Pelicula1.png",
-            "/proyectos/framework/Pelicula2.png",
-            "/proyectos/framework/Pelicula3.png"            
+            "/proyectos/apis/Pelicula1.png",
+            "/proyectos/apis/Pelicula2.png",
+            "/proyectos/apis/Pelicula3.png"            
         ],
         "descripcion": "Este proyecto es un buscador de peliculas que consume una API externa, desarrollado con React y Vite.",
         "proposito": "Como objetivo se desarrolla este trabajo para aprender a consumir APIs externas y manejar el estado en una aplicación React utilizando Vite como framework de React.",

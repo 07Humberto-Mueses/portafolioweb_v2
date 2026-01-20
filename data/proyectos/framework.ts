@@ -1,7 +1,7 @@
-[
+export const proyectoFramework = [
     {
         "titulo": "Ecommerce",
-        "imagen": "/proyectos/framework/Ecommerce.png",
+        "imagen": ["/proyectos/framework/Ecommerce.png"],
         "galeria": [
             "/proyectos/framework/Ecommerce1.png",
             "/proyectos/framework/Ecommerce2.png",
@@ -22,7 +22,7 @@
     },
     {
         "titulo": "Diario",
-        "imagen": "/proyectos/framework/Diario.png",
+        "imagen": ["/proyectos/framework/Diario.png"],
         "galeria": [
             "/proyectos/framework/Diario1.png",
             "/proyectos/framework/Diario2.png"
@@ -40,7 +40,7 @@
     },
     {
         "titulo": "Portafolio Hospital",
-        "imagen": "/proyectos/framework/Hospital.png",
+        "imagen": ["/proyectos/framework/Hospital.png"],
         "galeria": [
             "/proyectos/framework/Hospital1.png",
             "/proyectos/framework/Hospital2.png",
@@ -61,12 +61,12 @@
     },
     {
         "titulo": "Animaciones con GSAP",
-        "imagen": "/proyectos/framework/Animacion.png",
+        "imagen": ["/proyectos/framework/Animacion.png"],
         "galeria": [
             "/proyectos/framework/Animacion1.png",
             "/proyectos/framework/Animacion2.png",
             "/proyectos/framework/Animacion3.png",
-            "/proyectos/framework/Animacion4.png"            
+            "/proyectos/framework/Animacion4.png"
         ],
         "descripcion": "Una pagina web que muestra diversas animaciones utilizando la libreria GSAP (GreenSock Animation Platform) para crear efectos visuales atractivos y dinámicos.",
         "proposito": "El propósito de este proyecto es explorar las capacidades de la libreria GSAP para crear animaciones fluidas y atractivas en aplicaciones web, mejorando la experiencia del usuario a través de efectos visuales impactantes.",
@@ -80,11 +80,11 @@
     },
     {
         "titulo": "Blog de series",
-        "imagen": "/proyectos/framework/Blog.png",
+        "imagen": ["/proyectos/framework/Blog.png"],
         "galeria": [
             "/proyectos/framework/Blog1.png",
             "/proyectos/framework/Blog2.png",
-            "/proyectos/framework/Blog3.png"          
+            "/proyectos/framework/Blog3.png"
         ],
         "descripcion": "Para este trabajo se desarrollo una pagina web tipo blog que muestra tarjetas con informacion de series populares del momento.",
         "proposito": "El objetivo de esta practica es la aplicar una estructura adecuada de desarrillo de proyectos con React y Astro.",
@@ -99,10 +99,10 @@
     },
     {
         "titulo": "Buscador de jugadores",
-        "imagen": "/proyectos/framework/Jugadores.png",
+        "imagen": ["/proyectos/framework/Jugadores.png"],
         "galeria": [
             "/proyectos/framework/Jugadores1.png",
-            "/proyectos/framework/Jugadores2.png"       
+            "/proyectos/framework/Jugadores2.png"
         ],
         "descripcion": "Este proyecto es una pagina web que muestra informacion de jugadores de futbol famosos, desarrollada con React y Astro.",
         "proposito": "El propósito es aprender a consumir una API externa.",
@@ -118,4 +118,3 @@
 
 
 
-            

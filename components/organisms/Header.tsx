@@ -4,12 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import menuData from "@/data/menu.json";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "../molecules/ThemeToggle";
 
 export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-[#FFFFFF] dark:bg-[#28251F] fixed inset-x-0 top-0 w-full flex items-center justify-between px-6 py-2">
+        <header className="bg-[#FFFFFF] dark:bg-[#28251F] fixed inset-x-0 top-0 w-full flex items-center justify-between px-6 py-2 z-50">
             <Link href="/">
                 <Image
                     src="/logo.png"
@@ -31,16 +32,16 @@ export default function Header() {
                     <Link
                         key={item.path}
                         href={item.path}
-                        className={`maven-pro text-sm md:text-base transition-colors ${pathname == item.path
+                        className={`maven-pro font-bold text-sm md:text-base transition-colors ${pathname == item.path
                                 ? "text-[#E45F11]" // color activo
-                                : "text-[#131313] dark:text-[#C6C7C0] hover:text-[#E45F11]"
+                                : "text-[#131313] dark:text-[#FFFFFF] hover:text-[#E45F11]"
                             }`}
                     >
                         {item.name}
                     </Link>
                 ))}
-
             </nav>
+            <ThemeToggle/>
         </header>
     )
 }

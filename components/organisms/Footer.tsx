@@ -10,7 +10,7 @@ const footerButtons = [
 
 export default function Footer() {
   return (
-    <footer className="fixed inset-x-0 bottom-0 w-full bg-[#131313] dark:bg-[#C6C7C0]">
+    <footer className="fixed inset-x-0 bottom-0 w-full bg-[#131313] dark:bg-[#C6C7C0] z-50">
       <div className="absolute left-4 -top-16">
         <Button
           text="ES"

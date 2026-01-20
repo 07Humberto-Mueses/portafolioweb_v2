@@ -1,7 +1,7 @@
-[
+export const proyectosBasico = [
     {
         "titulo": "Calculadora",
-        "imagen": "/proyectos/basico/Calculadora.png",
+        "imagen": ["/proyectos/basico/Calculadora.png"],
         "galeria": [
             "/proyectos/basico/Calculadora1.png",
             "/proyectos/basico/Calculadora2.png"
@@ -17,7 +17,7 @@
     },
     {
         "titulo": "Presupuesto",
-        "imagen": "/proyectos/basico/Presupuesto.png",
+        "imagen": ["/proyectos/basico/Presupuesto.png"],
         "galeria": [
             "/proyectos/basico/Presupuesto1.png",
             "/proyectos/basico/Presupuesto2.png",
@@ -34,7 +34,7 @@
     },
     {
         "titulo": "Local de Ropa",
-        "imagen": "/proyectos/basico/Local.png",
+        "imagen": ["/proyectos/basico/Local.png"],
         "galeria": [
             "/proyectos/basico/Local1.png",
             "/proyectos/basico/Local2.png",
@@ -51,7 +51,7 @@
     },
     {
         "titulo": "Conversor de Temperatura",
-        "imagen": "/proyectos/basico/Conversor.png",
+        "imagen": ["/proyectos/basico/Conversor.png"],
         "galeria": [
             "/proyectos/basico/Conversor1.png",
             "/proyectos/basico/Conversor2.png",
@@ -70,7 +70,7 @@
     },
     {
         "titulo": "Portafolio Personal",
-        "imagen": "/proyectos/basico/Portafolio.png",
+        "imagen": ["/proyectos/basico/Portafolio.png"],
         "galeria": [
             "/proyectos/basico/Portafolio1.png",
             "/proyectos/basico/Portafolio2.png",
