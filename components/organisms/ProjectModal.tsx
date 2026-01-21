@@ -37,18 +37,18 @@ export default function ProjectModal({ isOpen, onClose, data }: ProjectModalProp
 
           {/* Información */}
           <div className="flex-1">
-            <h1 className="text-[#28251F] dark:text-[#FFFFFF] text-3xl text-center font-bold mb-4">{data.titulo}</h1>
-            <Text className='font-bold' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'>Descripción General</Text>
-            <Text className='' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-base'>{data.descripcion}</Text>
-            <Text className='font-bold' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'>Propósito</Text>
-            <Text className='' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'size='text-base'>{data.proposito}</Text>
-            <Text className='font-bold' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'>Funcionamiento</Text>
-            <Text className='' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'size='text-base'>{data.funcionamiento}</Text>
+            <h1 className="text-[#28251F] dark:text-[#FFFFFF] text-2xl text-center font-bold mb-4">{data.titulo}</h1>
+            <Text className='font-bold' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-base'>Descripción General</Text>
+            <Text className='' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-sm'>{data.descripcion}</Text>
+            <Text className='font-bold' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-base'>Propósito</Text>
+            <Text className='' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'size='text-sm'>{data.proposito}</Text>
+            <Text className='font-bold' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-base'>Funcionamiento</Text>
+            <Text className='' colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]'size='text-sm'>{data.funcionamiento}</Text>
 
-            <Text className="font-bold mt-4">Tecnologías</Text>
+            <Text className="font-bold mt-4" colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-base'>Tecnologías</Text>
             <ul className="inline-flex flex-wrap gap-2">
               {data.tecnologias.map((tec, idx) => (
-                <Text key={idx}>{tec}</Text>
+                <Text key={idx} colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-base'>{tec}</Text>
               ))}
             </ul>
           </div>

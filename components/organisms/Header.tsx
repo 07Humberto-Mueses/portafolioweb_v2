@@ -10,17 +10,17 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-[#FFFFFF] dark:bg-[#28251F] fixed inset-x-0 top-0 w-full flex items-center justify-between px-6 py-2 z-50">
+        <header className="bg-[#FFFFFF] dark:bg-[#28251F] fixed inset-x-0 top-0 w-full flex items-center justify-between px-6 py-1 z-50">
             <Link href="/">
                 <Image
-                    src="/logo.png"
+                    src="/LOGO.png"
                     alt="Logo"
                     width={70}
                     height={70}
                     className="m-3 dark:hidden"
                 />
                 <Image
-                    src="/logo.png"
+                    src="/LOGO.png"
                     alt="Logo Oscuro"
                     width={70}
                     height={70}

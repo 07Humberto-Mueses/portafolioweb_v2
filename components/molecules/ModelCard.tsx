@@ -11,8 +11,8 @@ export default function ModelCard({ imagen }: ModelCardProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
-        <div className="flex flex-col items-center z-10">
-            <div className="relative w-[350px] h-[370px] shadow-lg rounded-lg overflow-hidden">
+        <div className="flex flex-col items-center pt-6 z-10">
+            <div className="relative w-[250px] h-[270px] shadow-lg rounded-lg overflow-hidden">
                 <Image
                     src={imagen[currentIndex]}
                     alt="Model"
