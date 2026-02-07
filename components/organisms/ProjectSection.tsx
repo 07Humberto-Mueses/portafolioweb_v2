@@ -8,7 +8,6 @@ type ProyectSectionProps = {
     title: string;
     description: string;
     data: any[];
-    
 }
 
 export default function ProjectSection({ variant, images, title, description, data }: ProyectSectionProps) {

@@ -54,10 +54,9 @@ export default function ProjectCard({ imagen, data }: ProjectCardProps) {
                     onClick={handleNext}
                 />
             </div>
-
-            <ProjectModal 
-                isOpen={isOpen} 
-                onClose={() => setIsOpen(false)} 
+            <ProjectModal
+                isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
                 data={data[currentIndex]}
             />
         </div>
