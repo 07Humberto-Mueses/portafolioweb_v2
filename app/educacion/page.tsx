@@ -1,9 +1,21 @@
-import React from 'react'
+import Educacion from '@/components/molecules/Educacion'
+import { formacion } from '@/data/educacion/formacion'
 
 export default function page() {
   return (
-    <div>
-      <h1>Desde Educacion</h1>
+    <div className='space-y-6 px-8 py-4'>
+      {formacion.map((item, index) => (
+        <Educacion
+          key={index}
+          name={item.name}
+          institucion={item.institucion}
+          lugar={item.lugar}
+          duracion={item.duracion}
+          indicador={item.indicador}
+          calificacion={item.calificacion}
+        />
+      ))}
+
     </div>
   )
 }
