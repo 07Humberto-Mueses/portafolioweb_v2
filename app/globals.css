@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root { 
-  --background: #C6C7C0; 
+  --background: #C6C7C0;
+  --text-color: #28251F;
 } 
 
 .dark { 
-  --background: #131313; 
+  --background: #131313;
+  --text-color: #FFFFFF;
 }
 
 .irish-grover-regular {
@@ -25,5 +27,6 @@
 body {
   font-family: "Irish Grover", Arial, Helvetica, sans-serif;
   background-color: var(--background);
-  transition: background-color 0.3s ease;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

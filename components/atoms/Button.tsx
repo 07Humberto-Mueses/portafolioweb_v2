@@ -24,16 +24,18 @@ export default function Button({
 }: CustomButtonProps) {
   const baseClasses =
     `maven-pro inline-flex items-center justify-center 
-     font-bold px-2 py-1 rounded-xl
-     border-none outline-none apparance-none 
+     font-bold py-1 rounded-xl border-none outline-none apparance-none 
      transition-all duration-300 ease-in-out
      hover:scale-105 hover:shadow-xl active:scale-95
      focus-visible:ring-2 focus-visible:ring-indigo-400
-     ${textColor} ${bgColor}`;
+     ${textColor} ${bgColor}
+     px-3 py-2 text-sm
+     sm:px-4 sm:py-2 sm:text-base
+     md:px-5 md:py-3 md:text-lg`;
 
   const content = (
     <>
-      {text && <span>{text}</span>}
+      {text && <span className="mr-1">{text}</span>}
       {icon && icon}
     </>
   );

@@ -24,8 +24,8 @@ export default function ProjectCard({ imagen, data }: ProjectCardProps) {
     };
 
     return (
-        <div className="relative w-full max-w-xs mx-auto inset-0">
-            <div className="relative group w-full h-52 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full max-w-[220px] sm:max-w-xs mx-auto inset-0">
+            <div className="relative group w-full h-40 sm:h-52 rounded-lg overflow-hidden shadow-lg">
                 <Image
                     src={imagen[currentIndex]}
                     alt={`Imagen ${currentIndex + 1}`}
@@ -40,14 +40,14 @@ export default function ProjectCard({ imagen, data }: ProjectCardProps) {
                     />
                 </div>
             </div>
-            <div className="absolute top-1/2 -translate-y-1/2 left-0 -ml-16">
+            <div className="absolute top-1/2 -translate-y-1/2 left-0 -ml-12 sm:-ml-16">
                 <Button
                     bgColor=""
                     icon={Previous}
                     onClick={handlePrevious}
                 />
             </div>
-            <div className="absolute top-1/2 -translate-y-1/2 right-0 -mr-16">
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 -mr-12 sm:-mr-16">
                 <Button
                     bgColor=""
                     icon={Next}

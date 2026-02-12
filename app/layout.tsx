@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/organisms/Footer";
 import ThemeToggle from "@/components/molecules/ThemeToggle";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Portafolio Web Humberto Mueses",
@@ -14,15 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body className="transition-colors duration-300">
-        <div className="flex justify-end p-4">
-          <ThemeToggle/>
-        </div>
-        <main className="flex items-center flex-col">
-          {children}
-        </main>
-        <Footer/>
+        <ThemeProvider>
+          <div className="fixed top-4 right-4 z-50">
+            <ThemeToggle />
+          </div>
+          <main className="flex items-center flex-col">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

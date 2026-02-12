@@ -5,7 +5,7 @@ import { proyectoApis } from '@/data/proyectos/apis';
 
 export default function page() {
   return (
-    <div className='inset-0 z-10'>
+    <div className='space-y-12 px-4 sm:px-8 md:px-16 py-6 sm:py-10 inset-0 z-10'>
       <ProjectSection
         variant='derecha'
         images={proyectosBasico.map((p) => p.imagen[0])}

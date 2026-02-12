@@ -1,7 +1,7 @@
 
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
-import { CloseIcon } from '../icons/Icons';
+import { CloseIcon, Next, Previous } from '../icons/Icons';
 import ProfessionalModelCard from '../molecules/ProfessionalModelCard';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -40,12 +40,12 @@ export default function ProfessionalModal({ isOpen, onClose, data }: ProjectModa
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#C6C7C0]/90 dark:bg-[#131313]/90 z-50">
-      <div className="relative maven-pro bg-[#FFFFFF] dark:bg-[#000000] rounded-xl shadow-xl p-6 max-w-4xl w-full">
+      <div className="relative maven-pro bg-[#FFFFFF] dark:bg-[#000000] rounded-xl shadow-xl p-4 sm:p-6 max-w-4xl w-full">
         <div className="absolute top-2 right-2">
           <Button bgColor="" onClick={onClose} icon={CloseIcon} />
         </div>
 
-        <div className='flex items-center gap-6'>
+        <div className='hidden md:flex items-center gap-6'>
           {detalleEntries.length > 1 && (
             <div className='cursor-pointer transition-transform hover:scale-105' onClick={goPrev}>
               <div className='relative w-32 h-48 rounded-xl overflow-hidden shadow-xl'>
@@ -65,7 +65,7 @@ export default function ProfessionalModal({ isOpen, onClose, data }: ProjectModa
             />
             <div className='px-4 text-center'>
               <h1 className="text-[#28251F] dark:text-[#FFFFFF] text-xl font-bold mb-3">Descripción</h1>
-              <Text colorDark='dark:text-[#FFFFFF]' colorLight='text-[#28251F]' size='text-sm'>{desc}</Text>
+              <Text size='text-xs sm:text-sm md:text-base' className='text-[#28251F] dark:text-[#FFFFFF]'>{desc}</Text>
             </div>
           </div>
 
@@ -79,6 +79,20 @@ export default function ProfessionalModal({ isOpen, onClose, data }: ProjectModa
                   className='object-cover blur-xs opacity-70'
                 />
               </div>
+            </div>
+          )}
+        </div>
+
+        <div className="flex flex-col md:hidden items-center gap-4">
+          <ProfessionalModelCard imagen={detalleEntries[currentIndex][0]} />
+          <div className="px-4 text-center">
+            <h1 className="text-[#28251F] dark:text-[#FFFFFF] text-lg font-bold mb-2">Descripción</h1>
+            <Text className='dark:text-[#FFFFFF] text-[#28251F]' size="text-xs">{desc}</Text>
+          </div>
+          {detalleEntries.length > 1 && (
+            <div className="flex gap-6 mt-2">
+              <button onClick={goPrev}>{Previous}</button>
+              <button onClick={goNext}>{Next}</button>
             </div>
           )}
         </div>

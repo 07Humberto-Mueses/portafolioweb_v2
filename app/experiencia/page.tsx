@@ -4,7 +4,7 @@ import { proyectos } from '@/data/experienciaProfesional/proyectos'
 
 export default function page() {
   return (
-    <div>
+    <div className='w-full space-y-6 px-2 sm:px-6 md:px-16 py-4 sm:py-6'>
       {proyectos.map((proyecto) => (
         <ProfessionalSection
           key={proyecto.titulo}
