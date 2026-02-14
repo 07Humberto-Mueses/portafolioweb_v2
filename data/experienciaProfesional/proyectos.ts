@@ -1,6 +1,9 @@
 export const proyectos = [
     {
-        titulo: "Sistema de Facturación Acueducto y Alcantarillado de Santander de Valencia",
+        titulo: { 
+            ES: "Sistema de Facturación Acueducto y Alcantarillado de Santander de Valencia", 
+            EN: "Billing System for Aqueduct and Sewerage of Santander de Valencia", 
+        },
         imagen: ["/experiencia/acueducto/Acueducto.png"],
         tecnologias: [
             "Python",
@@ -11,44 +14,146 @@ export const proyectos = [
         repositorio: "https://github.com/07Humberto-Mueses/Acueducto",
         detalles: [
             {
-                "/experiencia/acueducto/Acueducto1.png": "El inicio de la aplicacion muestra un panel para iniciar sesion con un usuario, contraseña y el rol establecido.",
-                "/experiencia/acueducto/Acueducto2.png": "El panel principal de la aplicacion muestra una descripcion de las diferentes funcionalidades del sistema de facturacion.",
-                "/experiencia/acueducto/Acueducto3.png": "Para el panel de navegacion de implemento un menu lateral con las diferentes opciones del sistema de facturacion deacuerdo al rol del usuario, administrador, contador o secretario(a).",
-                "/experiencia/acueducto/Acueducto4.png": "Aqui se muestran las opciones del sistema por cada modulo implementado.",
-                "/experiencia/acueducto/Acueducto5.png": "Para el modulo de facturacion miramos la opción de Crear Factura con una interfaz de la factura que se generara en formato PDF, se rellena el campo de la matricula y automaticamente se rellenan los campos basicos del cliente, luego se completa los demas campos y se da clic en el boton Guardar Factura y Exportar Factura en PDF",
-                "/experiencia/acueducto/Acueducto6.png": "La ventana emergente que se muetra al darle clic en el boton Facturas Automáticas muestra la vista previa de la plantilla de la factura y un boton en la parte inferior para generar las facturas de todos los clientes registrados en el sistema como tipo de matricula estandar",
-                "/experiencia/acueducto/Acueducto7.png": "Esta ventana emergente muestra las facturas generadas por el sistema con el estado de pagada o pendiente ademas de unos filtros para agrupar las facturas por fecha.",
-                "/experiencia/acueducto/Acueducto8.png": "Para esta opción de Clientes se muestra un formulario para registrar a los clientes y unos botones auxiliares para la manipulacion de los datos.",
-                "/experiencia/acueducto/Acueducto9.png": "El boton de ver matriculas ubicado en la parte derecha del usuario registrado permite actualizar el estado del mismo y ver todas las matriculas asociadas a ese cliente.",
-                "/experiencia/acueducto/Acueducto10.png": "Para esta opción de Multas permite ingresar el documento del cliente, buscar y seleccionar la matricula a la cual se le va aplicar la multa y luego registrarla.",
-                "/experiencia/acueducto/Acueducto11.png": "La ventana emergente al presionar el boton de Mostrar Multas deja mirar todas las multas registradas a los clientes.",
-                "/experiencia/acueducto/Acueducto12.png": "Este apartado de Matriculas sirve para registrar todas las matriculas de cada cliente, un cliente puede tener una o varias matriculas y aqui se las registra con un tipo estandar que se refiere a un valor fijo por mes y el costo de registrar esta matricula ademas de la direccion de la residencia.",
-                "/experiencia/acueducto/Acueducto13.png": "La otra opción para el tipo de matricula es como Medidor con la cual se genera la factura dependiendo del consumo registrado en el medidor.",
-                "/experiencia/acueducto/Acueducto14.png": "Ingresando el numero de documento del cliente y con el boton Buscar matriculas se mira todas las matriculas registradas para ese cliente con su respectivas caracteristicas de ingreso y seleccion para editar el tipo de matricula.",
-                "/experiencia/acueducto/Acueducto15.png": "El boton de Mostrar Todo genera esta ventana que muestra los detalles de todas las matriculas registradas.",
-                "/experiencia/acueducto/Acueducto16.png": "Por último en este modulo de facturacion encontramos la opción de pago para todas las facturas que se generan, primero esta la opción de registrar el pago de la factura de los servicios y que dependiendo del tipo de factura ya sea estandar o medidor se registrara en el historial de pagos y cambiara el estado segun corresponda.",
-                "/experiencia/acueducto/Acueducto17.png": "Al digitar la el numero de factura se rellenan los campos del total de la factura y el valor pendiente por pagar de esa factura y con el valor a cancelar se registra cuanto cancelara el cliente. Las opciones en el tipo de pago por tiempo se aplican para las facturas estandar que si cancelan semestral o anual entonces no se generara mas facturas por este periodo hasta que se consuma el valor que cancelo el cliente.",
-                "/experiencia/acueducto/Acueducto18.png": "Para registrar el pago de la multa que se genero se ingresa el numero de la multa, automaticamente se trae el valor total y el pendiente y se tiene que digitar el valor que se va a cancelar para registrar el pago con el boton Guardar Pago.",
-                "/experiencia/acueducto/Acueducto19.png": "Para registrar el pago de la matricula que se genero se ingresa el numero de la matricula, automaticamente se trae el valor total y el pendiente y se tiene que digitar el valor que se va a cancelar para registrar el pago con el boton Guardar Pago.",
-                "/experiencia/acueducto/Acueducto20.png": "Los pagos realizados se pueden visualizar dando clic en el boton de Ver Historial de la opción Pagos y filtrando con las opciones disponibles.",
-                "/experiencia/acueducto/Acueducto21.png": "Para el modulo de Contabilidad primero miramos la opción de Ingresos donde se registrara los recursos obtenidos por otros medios diferentes a los servicios prestados por el acueducto.",
-                "/experiencia/acueducto/Acueducto22.png": "El boton de Listar Todos muestra una ventana emergente con unos filtros para mirar los ingresos registrados en el sistema y unas metricas basicas que son Total de ingresos, Total Egresos y Total en Caja. Ademas de la opción de generar un archivo PDF con el reporte generado.",
-                "/experiencia/acueducto/Acueducto23.png": "Para esta opción de Egresos se puede registrar egresos de efectivo o de productos adquiridos para el acueducto, ingresando los datos del formulario.",
-                "/experiencia/acueducto/Acueducto24.png": "Con la opción de Listar Todos se muestra unos filtros para mirar todos los egresos que se han realizado ademas de la opción de editar si es necesario.",
-                "/experiencia/acueducto/Acueducto25.png": "Esta opción de Inventario deja registrar objetos fisicos que se adquieren para el acueducto y que se pueden controlar en esta opción.",
-                "/experiencia/acueducto/Acueducto26.png": "Para este módulo de Configuracion que unicamente es accesible para el rol de Administrador, seencuentra la opcion de Crear Usuario donde se puede registrar en el sistema las credenciales de las personas que manipularan el sistemade facturacion.",
-                "/experiencia/acueducto/Acueducto27.png": "Esta opcion de Listar Usuarios permite visualizar todos los usuarios registrados en el sistema de facturacion con los detalles basicos y el estado actual de cada uno.",
-                "/experiencia/acueducto/Acueducto28.png": "El boton de Editar Estado que se encuentra en cada usuario permite seleccionar al usuario y activar o inactivar su cuenta como medida de seguridad y control.",
-                "/experiencia/acueducto/Acueducto29.png": "Para la opcion de Ver Historial de Movimientos se muestra un boton que lleva a una ventana emergente con un registro detallado de las acciones realizadas por cada usuario en el sistema.",
-                "/experiencia/acueducto/Acueducto30.png": "La ventana emergente contiene un par de filtros para que la informacion se muestre de manera organizada y la en el detallado de la tabla se muestra en detalle el cambio realizado por el usuario",
-                "/experiencia/acueducto/Acueducto31.png": "Para la opcion de Gestionar Tarifas miramos la relacion primero con la tarifa estandar, esta tarifa es fija y representa el valor que cada mes debe cancelar el cliente por el servicio basico del acueducto. Cada factura automatica que se genera se graba con esta tarifa y el pago mensual, semestral o anual que se realice depende de este valor.",
-                "/experiencia/acueducto/Acueducto32.png": "Para la tarifa del medidor se configura en esta opcion y representa el costo por metro cubico consumido de agua. Para generar una factura con este tipo de tarifa hay que registrar el consumo del medidor.",
-                "/experiencia/acueducto/Acueducto33.png": "Este es el módulo final del sistema que es comun para todos los roles y es el que controla la salida segura con el boton de Salir y ademas la opcion para cambiar la contraseña del usuario autenticado."
+                "/experiencia/acueducto/Acueducto1.png": {
+                    ES: "El inicio de la aplicacion muestra un panel para iniciar sesion con un usuario, contraseña y el rol establecido.",
+                    EN: "The application start shows a login panel with a user, password and established role."
+                },
+                "/experiencia/acueducto/Acueducto2.png": {
+                    ES: "El panel principal de la aplicacion muestra una descripcion de las diferentes funcionalidades del sistema de facturacion.",
+                    EN: "The main panel of the application shows a description of the different functionalities of the billing system."
+                },
+                "/experiencia/acueducto/Acueducto3.png": {
+                    ES: "Para el panel de navegacion de implemento un menu lateral con las diferentes opciones del sistema de facturacion deacuerdo al rol del usuario, administrador, contador o secretario(a).",
+                    EN: "For the navigation panel, a side menu was implemented with the different options of the billing system according to the user's role: administrator, accountant or secretary."
+                },
+                "/experiencia/acueducto/Acueducto4.png": {
+                    ES: "Aqui se muestran las opciones del sistema por cada modulo implementado.",
+                    EN: "Here the system options are shown for each implemented module."
+                },
+                "/experiencia/acueducto/Acueducto5.png": {
+                    ES: "Para el modulo de facturacion miramos la opción de Crear Factura con una interfaz de la factura que se generara en formato PDF, se rellena el campo de la matricula y automaticamente se rellenan los campos basicos del cliente, luego se completa los demas campos y se da clic en el boton Guardar Factura y Exportar Factura en PDF",
+                    EN: "For the billing module, we see the Create Invoice option with an interface of the invoice that will be generated in PDF format. The registration field is filled in and the client's basic fields are automatically filled in, then the other fields are completed and the Save Invoice and Export Invoice to PDF button is clicked."
+                },
+                "/experiencia/acueducto/Acueducto6.png": {
+                    ES: "La ventana emergente que se muetra al darle clic en el boton Facturas Automáticas muestra la vista previa de la plantilla de la factura y un boton en la parte inferior para generar las facturas de todos los clientes registrados en el sistema como tipo de matricula estandar",
+                    EN: "The pop-up window shown when clicking on the Automatic Invoices button shows the preview of the invoice template and a button at the bottom to generate invoices for all clients registered in the system as standard registration type."
+                },
+                "/experiencia/acueducto/Acueducto7.png": {
+                    ES: "Esta ventana emergente muestra las facturas generadas por el sistema con el estado de pagada o pendiente ademas de unos filtros para agrupar las facturas por fecha.",
+                    EN: "This pop-up window shows the invoices generated by the system with paid or pending status, as well as filters to group invoices by date."
+                },
+                "/experiencia/acueducto/Acueducto8.png": {
+                    ES: "Para esta opción de Clientes se muestra un formulario para registrar a los clientes y unos botones auxiliares para la manipulacion de los datos.",
+                    EN: "For this Clients option, a form is shown to register clients and auxiliary buttons for data manipulation."
+                },
+                "/experiencia/acueducto/Acueducto9.png": {
+                    ES: "El boton de ver matriculas ubicado en la parte derecha del usuario registrado permite actualizar el estado del mismo y ver todas las matriculas asociadas a ese cliente.",
+                    EN: "The view registrations button located on the right side of the registered user allows updating its status and viewing all registrations associated with that client."
+                },
+                "/experiencia/acueducto/Acueducto10.png": {
+                    ES: "Para esta opción de Multas permite ingresar el documento del cliente, buscar y seleccionar la matricula a la cual se le va aplicar la multa y luego registrarla.",
+                    EN: "For this Fines option, you can enter the client's document, search and select the registration to which the fine will be applied and then register it."
+                },
+                "/experiencia/acueducto/Acueducto11.png": {
+                    ES: "La ventana emergente al presionar el boton de Mostrar Multas deja mirar todas las multas registradas a los clientes.",
+                    EN: "The pop-up window when pressing the Show Fines button allows viewing all fines registered to clients."
+                },
+                "/experiencia/acueducto/Acueducto12.png": {
+                    ES: "Este apartado de Matriculas sirve para registrar todas las matriculas de cada cliente, un cliente puede tener una o varias matriculas y aqui se las registra con un tipo estandar que se refiere a un valor fijo por mes y el costo de registrar esta matricula ademas de la direccion de la residencia.",
+                    EN: "This Registrations section is used to register all registrations for each client. A client can have one or several registrations and they are registered here with a standard type that refers to a fixed monthly value and the cost of registering this registration, in addition to the residence address."
+                },
+                "/experiencia/acueducto/Acueducto13.png": {
+                    ES: "La otra opción para el tipo de matricula es como Medidor con la cual se genera la factura dependiendo del consumo registrado en el medidor.",
+                    EN: "The other option for the registration type is as Meter, with which the invoice is generated depending on the consumption registered on the meter."
+                },
+                "/experiencia/acueducto/Acueducto14.png": {
+                    ES: "Ingresando el numero de documento del cliente y con el boton Buscar matriculas se mira todas las matriculas registradas para ese cliente con su respectivas caracteristicas de ingreso y seleccion para editar el tipo de matricula.",
+                    EN: "By entering the client's document number and clicking the Search Registrations button, all registrations for that client are displayed with their respective entry and selection characteristics to edit the registration type."
+                },
+                "/experiencia/acueducto/Acueducto15.png": {
+                    ES: "El boton de Mostrar Todo genera esta ventana que muestra los detalles de todas las matriculas registradas.",
+                    EN: "The Show All button generates this window that shows the details of all registered registrations."
+                },
+                "/experiencia/acueducto/Acueducto16.png": {
+                    ES: "Por último en este modulo de facturacion encontramos la opción de pago para todas las facturas que se generan, primero esta la opción de registrar el pago de la factura de los servicios y que dependiendo del tipo de factura ya sea estandar o medidor se registrara en el historial de pagos y cambiara el estado segun corresponda.",
+                    EN: "Finally, in this billing module we find the payment option for all invoices generated. First, there is the option to register the payment of the service invoice, and depending on the type of invoice (standard or meter), it will be recorded in the payment history and the status will change accordingly."
+                },
+                "/experiencia/acueducto/Acueducto17.png": {
+                    ES: "Al digitar la el numero de factura se rellenan los campos del total de la factura y el valor pendiente por pagar de esa factura y con el valor a cancelar se registra cuanto cancelara el cliente. Las opciones en el tipo de pago por tiempo se aplican para las facturas estandar que si cancelan semestral o anual entonces no se generara mas facturas por este periodo hasta que se consuma el valor que cancelo el cliente.",
+                    EN: "When entering the invoice number, the fields for the invoice total and the pending amount to be paid for that invoice are filled in, and the amount to be canceled records how much the client will pay. The payment type options by time apply to standard invoices: if they pay semi-annually or annually, no more invoices will be generated for this period until the amount paid by the client is consumed."
+                },
+                "/experiencia/acueducto/Acueducto18.png": {
+                    ES: "Para registrar el pago de la multa que se genero se ingresa el numero de la multa, automaticamente se trae el valor total y el pendiente y se tiene que digitar el valor que se va a cancelar para registrar el pago con el boton Guardar Pago.",
+                    EN: "To register the payment of the generated fine, enter the fine number. The total value and pending amount are automatically retrieved, and you must enter the amount to be paid to register the payment with the Save Payment button."
+                },
+                "/experiencia/acueducto/Acueducto19.png": {
+                    ES: "Para registrar el pago de la matricula que se genero se ingresa el numero de la matricula, automaticamente se trae el valor total y el pendiente y se tiene que digitar el valor que se va a cancelar para registrar el pago con el boton Guardar Pago.",
+                    EN: "To register the payment of the generated registration, enter the registration number. The total value and pending amount are automatically retrieved, and you must enter the amount to be paid to register the payment with the Save Payment button."
+                },
+                "/experiencia/acueducto/Acueducto20.png": {
+                    ES: "Los pagos realizados se pueden visualizar dando clic en el boton de Ver Historial de la opción Pagos y filtrando con las opciones disponibles.",
+                    EN: "Payments made can be viewed by clicking on the View History button in the Payments option and filtering with the available options."
+                },
+                "/experiencia/acueducto/Acueducto21.png": {
+                    ES: "Para el modulo de Contabilidad primero miramos la opción de Ingresos donde se registrara los recursos obtenidos por otros medios diferentes a los servicios prestados por el acueducto.",
+                    EN: "For the Accounting module, we first look at the Income option where resources obtained through means other than the services provided by the aqueduct will be recorded."
+                },
+                "/experiencia/acueducto/Acueducto22.png": {
+                    ES: "El boton de Listar Todos muestra una ventana emergente con unos filtros para mirar los ingresos registrados en el sistema y unas metricas basicas que son Total de ingresos, Total Egresos y Total en Caja. Ademas de la opción de generar un archivo PDF con el reporte generado.",
+                    EN: "The List All button shows a pop-up window with filters to view the income recorded in the system and basic metrics: Total Income, Total Expenses and Total Cash. It also includes the option to generate a PDF file with the generated report."
+                },
+                "/experiencia/acueducto/Acueducto23.png": {
+                    ES: "Para esta opción de Egresos se puede registrar egresos de efectivo o de productos adquiridos para el acueducto, ingresando los datos del formulario.",
+                    EN: "For this Expenses option, you can record cash expenses or products purchased for the aqueduct by entering the form data."
+                },
+                "/experiencia/acueducto/Acueducto24.png": {
+                    ES: "Con la opción de Listar Todos se muestra unos filtros para mirar todos los egresos que se han realizado ademas de la opción de editar si es necesario.",
+                    EN: "With the List All option, filters are shown to view all expenses that have been made, as well as the option to edit if necessary."
+                },
+                "/experiencia/acueducto/Acueducto25.png": {
+                    ES: "Esta opción de Inventario deja registrar objetos fisicos que se adquieren para el acueducto y que se pueden controlar en esta opción.",
+                    EN: "This Inventory option allows registering physical objects that are acquired for the aqueduct and can be controlled in this option."
+                },
+                "/experiencia/acueducto/Acueducto26.png": {
+                    ES: "Para este módulo de Configuracion que unicamente es accesible para el rol de Administrador, seencuentra la opcion de Crear Usuario donde se puede registrar en el sistema las credenciales de las personas que manipularan el sistemade facturacion.",
+                    EN: "For this Configuration module, which is only accessible to the Administrator role, there is the Create User option where you can register the credentials of the people who will handle the billing system."
+                },
+                "/experiencia/acueducto/Acueducto27.png": {
+                    ES: "Esta opcion de Listar Usuarios permite visualizar todos los usuarios registrados en el sistema de facturacion con los detalles basicos y el estado actual de cada uno.",
+                    EN: "This List Users option allows viewing all users registered in the billing system with basic details and the current status of each one."
+                },
+                "/experiencia/acueducto/Acueducto28.png": {
+                    ES: "El boton de Editar Estado que se encuentra en cada usuario permite seleccionar al usuario y activar o inactivar su cuenta como medida de seguridad y control.",
+                    EN: "The Edit Status button found on each user allows selecting the user and activating or deactivating their account as a security and control measure."
+                },
+                "/experiencia/acueducto/Acueducto29.png": {
+                    ES: "Para la opcion de Ver Historial de Movimientos se muestra un boton que lleva a una ventana emergente con un registro detallado de las acciones realizadas por cada usuario en el sistema.",
+                    EN: "For the View Movement History option, a button is shown that leads to a pop-up window with a detailed record of the actions performed by each user in the system."
+                },
+                "/experiencia/acueducto/Acueducto30.png": {
+                    ES: "La ventana emergente contiene un par de filtros para que la informacion se muestre de manera organizada y la en el detallado de la tabla se muestra en detalle el cambio realizado por el usuario",
+                    EN: "The pop-up window contains a couple of filters so that the information is displayed in an organized manner, and the table detail shows in detail the change made by the user."
+                },
+                "/experiencia/acueducto/Acueducto31.png": {
+                    ES: "Para la opcion de Gestionar Tarifas miramos la relacion primero con la tarifa estandar, esta tarifa es fija y representa el valor que cada mes debe cancelar el cliente por el servicio basico del acueducto. Cada factura automatica que se genera se graba con esta tarifa y el pago mensual, semestral o anual que se realice depende de este valor.",
+                    EN: "For the Manage Rates option, we first look at the relationship with the standard rate. This rate is fixed and represents the amount that the customer must pay each month for the basic aqueduct service. Each automatic invoice generated is recorded with this rate, and the monthly, semi-annual or annual payment depends on this value."
+                },
+                "/experiencia/acueducto/Acueducto32.png": {
+                    ES: "Para la tarifa del medidor se configura en esta opcion y representa el costo por metro cubico consumido de agua. Para generar una factura con este tipo de tarifa hay que registrar el consumo del medidor.",
+                    EN: "The meter rate is configured in this option and represents the cost per cubic meter of water consumed. To generate an invoice with this type of rate, the meter consumption must be recorded."
+                },
+                "/experiencia/acueducto/Acueducto33.png": {
+                    ES: "Este es el módulo final del sistema que es comun para todos los roles y es el que controla la salida segura con el boton de Salir y ademas la opcion para cambiar la contraseña del usuario autenticado.",
+                    EN: "This is the final module of the system that is common to all roles and controls the secure logout with the Logout button, as well as the option to change the authenticated user's password."
+                }
             }
         ]
     },
     {
-        titulo: "MentaMática",
+        titulo: {
+            ES: "MentaMática",
+            EN: "MentaMática"
+        },
         imagen: ["/experiencia/mentamatica/Mentamatica.png"],
         tecnologias: [
             "NextJs",
@@ -61,24 +166,66 @@ export const proyectos = [
         repositorio: "https://github.com/07Humberto-Mueses/mentamatica_app",
         detalles: [
             {
-                "/experiencia/mentamatica/Mentamatica1.png": "Esta aplicacion web fue realizada con el objetivo de implementar la neurociencia cognitiva como apoyo en el aprendizaje de matematicas en niños de segundo grado de primaria. Se puede identificar los modulos de aprendizaje incluidos.",
-                "/experiencia/mentamatica/Mentamatica2.png": "Miramos los dos botones para hacer el registro y el inicio de sesion obligatoria para usar la aplicacion",
-                "/experiencia/mentamatica/Mentamatica3.png": "Las tematicas que se trabajan en la aplicacion son el resultado del levantamiento de requerimientos que se hizo en la investigacion. Se puede visualizar un manual de uso para los padres de familia y tambien uno para los usuarios reales que serian los niños; estos contienen una vision general de como funciona la aplicacion, su navegacion y como se deben interpretar las metricas implementadas",
-                "/experiencia/mentamatica/Mentamatica4.png": "Para el registro y el inicio de sesion se utiliza la platafaroma Clerk que ofrece la facilidad de implementar una autenticacion rapida, segura y facil y asi enfocarnos en el contenido y la demas funcionalidades de la plataforma",
-                "/experiencia/mentamatica/Mentamatica5.png": "Una vez iniciado este es el panel principal que se muestra con los contenidos y todas las metricas implementadas; estas metricas se obtienen a traves de consultas a la base de datos y fueron formuladas durante la creacion del sistema, con el objetivo de que favorezcan en la comprension y progreso que tiene el usuario. Con el registro enlazado al inicio se van guardando los datos, de manera que el adulto a cargo tiene el control total del progreso y la interaccion que tiene el niño o niña con la aplicación",
-                "/experiencia/mentamatica/Mentamatica6.png": "En la parte inferior del panel se muestra informacion relacionada con la neurociencia cognitiva para que los padres o los responsables esten informados de la importancia que tiene esta ciencia en el desarrollo de sus hijos y apoyen sus procesos.",
-                "/experiencia/mentamatica/Mentamatica7.png": "En la parte superior se encuentra un icono de cerebro para mostrar una ventana emergente con mensajes especificos de estimulacion cognitiva para los niños.",
-                "/experiencia/mentamatica/Mentamatica8.png": "Para la configuracion encontramos un boton en la parte superior derecha, ahi se miran 4 partes: sonidos, ayuda, Mi avatar y caracteristicas de la dinamica de los juegos.",
-                "/experiencia/mentamatica/Mentamatica9.png": "Esta personalizacion del avatar es una de las mas importantes de la aplicacion, es la manera que se implementa para que los niños encuentren una motivacion constante y visualmente atractiva. Pueden desbloquear las caracteristicas que se muestran en la pantalla y jugar como ellos quieran con la figura a la derecha y guardar esa personalizacion en el estado y tambien como imagen en sus equipos. La API DiceBear ofrece esta personalizacion y nosotros la incluimos en nuestra aplicacion.",
-                "/experiencia/mentamatica/Mentamatica10.png": "Esta animacion se muestra en cada uno de los modulos como herramienta visual para preparar al niño para los juegos.",
-                "/experiencia/mentamatica/Mentamatica11.png": "En el panel de cada modulo se muestra un video relacioado con el tema y los juegos desarrollados, las metricas que se guardan con cada desarrollo del juego se guardan en forma de monedas y estrellas: el maximo son 3 estrellas cuando no comete ningun error y el intento que obtuvo mayor cantidad de estrellas se pintara en la parte inferior, el reconocimiento de las estrellas se traducen en monedas que se van acumulando en forma global con todos los juegos de todos los modulos y que se pueden gastar en la personalizacion del avatar porque de inicio todas las caracteristicas estaran bloqueadas.",
-                "/experiencia/mentamatica/Mentamatica12.png": "La base de datos se encuentra en la nube con la plataforma Neon, es facil de implementar y favorece a la accesibilidad en cualquier momento y desde cualquier lugar.",
-                "/experiencia/mentamatica/Mentamatica13.png": "En la autenticacion que se realiza con Clerk tambien se encuentra en la nube y conectada directamente a la aplicacion, permite administrar y validar a los usuarios con sus correos y su configuracion permite varidad de caracteristicas."
+                "/experiencia/mentamatica/Mentamatica1.png": {
+                    ES: "Esta aplicacion web fue realizada con el objetivo de implementar la neurociencia cognitiva como apoyo en el aprendizaje de matematicas en niños de segundo grado de primaria. Se puede identificar los modulos de aprendizaje incluidos.",
+                    EN: "This web application was created with the objective of implementing cognitive neuroscience as support for learning mathematics in second grade primary school children. The included learning modules can be identified."
+                },
+                "/experiencia/mentamatica/Mentamatica2.png": {
+                    ES: "Miramos los dos botones para hacer el registro y el inicio de sesion obligatoria para usar la aplicacion",
+                    EN: "We see the two buttons for registration and mandatory login to use the application."
+                },
+                "/experiencia/mentamatica/Mentamatica3.png": {
+                    ES: "Las tematicas que se trabajan en la aplicacion son el resultado del levantamiento de requerimientos que se hizo en la investigacion. Se puede visualizar un manual de uso para los padres de familia y tambien uno para los usuarios reales que serian los niños; estos contienen una vision general de como funciona la aplicacion, su navegacion y como se deben interpretar las metricas implementadas",
+                    EN: "The topics covered in the application are the result of the requirements gathering done in the research. A user manual can be viewed for parents and also one for the actual users, the children. These contain an overview of how the application works, its navigation and how the implemented metrics should be interpreted."
+                },
+                "/experiencia/mentamatica/Mentamatica4.png": {
+                    ES: "Para el registro y el inicio de sesion se utiliza la platafaroma Clerk que ofrece la facilidad de implementar una autenticacion rapida, segura y facil y asi enfocarnos en el contenido y la demas funcionalidades de la plataforma",
+                    EN: "For registration and login, the Clerk platform is used, which offers the ease of implementing fast, secure and easy authentication, allowing us to focus on the content and other functionalities of the platform."
+                },
+                "/experiencia/mentamatica/Mentamatica5.png": {
+                    ES: "Una vez iniciado este es el panel principal que se muestra con los contenidos y todas las metricas implementadas; estas metricas se obtienen a traves de consultas a la base de datos y fueron formuladas durante la creacion del sistema, con el objetivo de que favorezcan en la comprension y progreso que tiene el usuario. Con el registro enlazado al inicio se van guardando los datos, de manera que el adulto a cargo tiene el control total del progreso y la interaccion que tiene el niño o niña con la aplicación",
+                    EN: "Once logged in, this is the main panel shown with the contents and all implemented metrics. These metrics are obtained through database queries and were formulated during system creation, with the aim of favoring the user's understanding and progress. With the registration linked to the start, data is saved so that the adult in charge has total control of the child's progress and interaction with the application."
+                },
+                "/experiencia/mentamatica/Mentamatica6.png": {
+                    ES: "En la parte inferior del panel se muestra informacion relacionada con la neurociencia cognitiva para que los padres o los responsables esten informados de la importancia que tiene esta ciencia en el desarrollo de sus hijos y apoyen sus procesos.",
+                    EN: "At the bottom of the panel, information related to cognitive neuroscience is shown so that parents or guardians are informed of the importance of this science in their children's development and support their processes."
+                },
+                "/experiencia/mentamatica/Mentamatica7.png": {
+                    ES: "En la parte superior se encuentra un icono de cerebro para mostrar una ventana emergente con mensajes especificos de estimulacion cognitiva para los niños.",
+                    EN: "At the top there is a brain icon to display a pop-up window with specific cognitive stimulation messages for children."
+                },
+                "/experiencia/mentamatica/Mentamatica8.png": {
+                    ES: "Para la configuracion encontramos un boton en la parte superior derecha, ahi se miran 4 partes: sonidos, ayuda, Mi avatar y caracteristicas de la dinamica de los juegos.",
+                    EN: "For configuration, we find a button in the upper right corner, where you can see 4 parts: sounds, help, My avatar and game dynamics features."
+                },
+                "/experiencia/mentamatica/Mentamatica9.png": {
+                    ES: "Esta personalizacion del avatar es una de las mas importantes de la aplicacion, es la manera que se implementa para que los niños encuentren una motivacion constante y visualmente atractiva. Pueden desbloquear las caracteristicas que se muestran en la pantalla y jugar como ellos quieran con la figura a la derecha y guardar esa personalizacion en el estado y tambien como imagen en sus equipos. La API DiceBear ofrece esta personalizacion y nosotros la incluimos en nuestra aplicacion.",
+                    EN: "This avatar customization is one of the most important features of the application. It is implemented so that children find constant and visually attractive motivation. They can unlock the features shown on the screen and play as they want with the figure on the right and save that customization in the state and also as an image on their devices. The DiceBear API offers this customization and we include it in our application."
+                },
+                "/experiencia/mentamatica/Mentamatica10.png": {
+                    ES: "Esta animacion se muestra en cada uno de los modulos como herramienta visual para preparar al niño para los juegos.",
+                    EN: "This animation is shown in each of the modules as a visual tool to prepare the child for the games."
+                },
+                "/experiencia/mentamatica/Mentamatica11.png": {
+                    ES: "En el panel de cada modulo se muestra un video relacioado con el tema y los juegos desarrollados, las metricas que se guardan con cada desarrollo del juego se guardan en forma de monedas y estrellas: el maximo son 3 estrellas cuando no comete ningun error y el intento que obtuvo mayor cantidad de estrellas se pintara en la parte inferior, el reconocimiento de las estrellas se traducen en monedas que se van acumulando en forma global con todos los juegos de todos los modulos y que se pueden gastar en la personalizacion del avatar porque de inicio todas las caracteristicas estaran bloqueadas.",
+                    EN: "In the panel of each module, a video related to the topic and the developed games is shown. The metrics saved with each game development are saved in the form of coins and stars: the maximum is 3 stars when no errors are made, and the attempt that obtained the most stars will be displayed at the bottom. The recognition of stars translates into coins that accumulate globally with all games from all modules and can be spent on avatar customization, as all features will be locked at the beginning."
+                },
+                "/experiencia/mentamatica/Mentamatica12.png": {
+                    ES: "La base de datos se encuentra en la nube con la plataforma Neon, es facil de implementar y favorece a la accesibilidad en cualquier momento y desde cualquier lugar.",
+                    EN: "The database is in the cloud with the Neon platform. It is easy to implement and favors accessibility at any time and from anywhere."
+                },
+                "/experiencia/mentamatica/Mentamatica13.png": {
+                    ES: "En la autenticacion que se realiza con Clerk tambien se encuentra en la nube y conectada directamente a la aplicacion, permite administrar y validar a los usuarios con sus correos y su configuracion permite varidad de caracteristicas.",
+                    EN: "The authentication performed with Clerk is also in the cloud and connected directly to the application. It allows managing and validating users with their emails, and its configuration allows for a variety of features."
+                }
             },
         ]
     },
     {
-        titulo: "Sistema de Gestion Documental Clinica Nuestra Señora de Fátima",
+        titulo: { 
+            ES: "Sistema de Gestión Documental Clínica Nuestra Señora de Fátima", 
+            EN: "Document Management System - Nuestra Señora de Fátima Clinic", 
+        },
         imagen: ["/experiencia/clinica/Clinica.png"],
         tecnologias: [
             "NextJs",
@@ -88,12 +235,30 @@ export const proyectos = [
         repositorio: "https://github.com/07Humberto-Mueses/proyecto-clinica-fatima",
         detalles: [
             {
-                "/experiencia/clinica/Clinica1.png": "La Clinica Nuestra Señora de Fatima como institucion prestadora de servicios de salud es una de las mas reconocidas en el departamento de Nariño y este sistema se desarrolla con el fin de ayudar en los procesos internos de la empresa.",
-                "/experiencia/clinica/Clinica2.png": "Como objetivos iniciales del proyecto se propone esta interfaz visual para el acceso a la aplicacion y un pie de pagina que direccionan a las diferentes redes sociales de la clinica.",
-                "/experiencia/clinica/Clinica3.png": "En esta visual se presenta la organizacion de toda la entidad de salud, cada area y proceso pertenece a alguno de estos grupos; el objetivo de este proyecto es presentar una visualizacion clara e intuitiva de cada formato que hace parte del SGC, ya que es uno de los pilares de la clinica.",
-                "/experiencia/clinica/Clinica4.png": "Para la navegacion se presentan dos variaciones, algunos subprocesos contienen unas dependencias y esas dependencias se tienen en cuenta para la navegacion y visualizacion, y luego en el espacio de trabajo se presentarian los formatos que pertenece a lo seleccionado.",
-                "/experiencia/clinica/Clinica5.png": "En el area de admisiones y facturacion se realiza una implementacion: a traves de archivos excel cargados se puede hacer una busqueda de un servicio que se deba realizar en otra entidad y se analiza los resultados de cada archivo que es referencia de una entidad externa para elegir la mas conveniente.",
-                "/experiencia/clinica/Clinica6.png": "Otra de las implementaciones que se realiza es para la parte de contratacion: permite cargar archivos excel con informacion para contratacion con las EPS y posteriormente ajustar las tarifas para elegir una que si represente ganancias para la clinica."
+                "/experiencia/clinica/Clinica1.png": {
+                    ES: "La Clinica Nuestra Señora de Fatima como institucion prestadora de servicios de salud es una de las mas reconocidas en el departamento de Nariño y este sistema se desarrolla con el fin de ayudar en los procesos internos de la empresa.",
+                    EN: "Nuestra Señora de Fátima Clinic, as a health service provider institution, is one of the most recognized in the Nariño department, and this system is developed to help with the company's internal processes."
+                },
+                "/experiencia/clinica/Clinica2.png": {
+                    ES: "Como objetivos iniciales del proyecto se propone esta interfaz visual para el acceso a la aplicacion y un pie de pagina que direccionan a las diferentes redes sociales de la clinica.",
+                    EN: "As initial project objectives, this visual interface is proposed for application access and a footer that directs to the clinic's different social networks."
+                },
+                "/experiencia/clinica/Clinica3.png": {
+                    ES: "En esta visual se presenta la organizacion de toda la entidad de salud, cada area y proceso pertenece a alguno de estos grupos; el objetivo de este proyecto es presentar una visualizacion clara e intuitiva de cada formato que hace parte del SGC, ya que es uno de los pilares de la clinica.",
+                    EN: "This visual presents the organization of the entire health entity. Each area and process belongs to one of these groups. The objective of this project is to present a clear and intuitive visualization of each format that is part of the QMS, as it is one of the clinic's pillars."
+                },
+                "/experiencia/clinica/Clinica4.png": {
+                    ES: "Para la navegacion se presentan dos variaciones, algunos subprocesos contienen unas dependencias y esas dependencias se tienen en cuenta para la navegacion y visualizacion, y luego en el espacio de trabajo se presentarian los formatos que pertenece a lo seleccionado.",
+                    EN: "For navigation, two variations are presented. Some subprocesses contain dependencies, and these dependencies are taken into account for navigation and visualization. Then, in the workspace, the formats belonging to the selection would be presented."
+                },
+                "/experiencia/clinica/Clinica5.png": {
+                    ES: "En el area de admisiones y facturacion se realiza una implementacion: a traves de archivos excel cargados se puede hacer una busqueda de un servicio que se deba realizar en otra entidad y se analiza los resultados de cada archivo que es referencia de una entidad externa para elegir la mas conveniente.",
+                    EN: "In the admissions and billing area, an implementation is made: through uploaded Excel files, you can search for a service that should be performed at another entity and analyze the results of each file that references an external entity to choose the most convenient one."
+                },
+                "/experiencia/clinica/Clinica6.png": {
+                    ES: "Otra de las implementaciones que se realiza es para la parte de contratacion: permite cargar archivos excel con informacion para contratacion con las EPS y posteriormente ajustar las tarifas para elegir una que si represente ganancias para la clinica.",
+                    EN: "Another implementation is for the contracting part: it allows uploading Excel files with information for contracting with health insurance companies (EPS) and subsequently adjusting rates to choose one that represents profits for the clinic."
+                }
             },
         ]
     }

@@ -1,6 +1,6 @@
 "use client";
-
 import ProjectCard from "../molecules/ProjectCard";
+import { useLanguage } from "@/context/LanguageContext";
 
 type ProyectSectionProps = {
     variant?: string;
@@ -11,6 +11,7 @@ type ProyectSectionProps = {
 }
 
 export default function ProjectSection({ variant, images, title, description, data }: ProyectSectionProps) {
+    const { lang } = useLanguage();
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col md:hidden w-full gap-4">

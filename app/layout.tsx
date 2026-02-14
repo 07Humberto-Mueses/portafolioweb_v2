@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/organisms/Footer";
 import ThemeToggle from "@/components/molecules/ThemeToggle";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Portafolio Web Humberto Mueses",
@@ -17,15 +18,17 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body className="transition-colors duration-300">
-        <ThemeProvider>
-          <div className="fixed top-4 right-4 z-50">
-            <ThemeToggle />
-          </div>
-          <main className="flex items-center flex-col">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider>
+            <div className="fixed top-4 right-4 z-50">
+              <ThemeToggle />
+            </div>
+            <main className="flex items-center flex-col">
+              {children}
+            </main>
+            <Footer />
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

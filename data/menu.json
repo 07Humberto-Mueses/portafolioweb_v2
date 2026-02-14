@@ -1,6 +1,6 @@
 [
-    { "name": "SOBRE MÍ", "path": "/sobreMi" },
-    { "name": "PROYECTOS", "path": "/proyectos" },
-    { "name": "EXPERIENCIA PROFESIONAL", "path": "/experiencia" },
-    { "name": "EDUCACIÓN", "path": "/educacion" }
+    { "name": {"ES": "SOBRE MÍ", "EN": "ABOUT ME"}, "path": "/sobreMi" },
+    { "name": {"ES": "PROYECTOS", "EN": "PROJECTS"}, "path": "/proyectos" },
+    { "name": {"ES": "EXPERIENCIA PROFESIONAL", "EN": "PROFESSIONAL EXPERIENCE"}, "path": "/experiencia" },
+    { "name": {"ES": "EDUCACIÓN", "EN": "EDUCATION"}, "path": "/educacion" }
 ]

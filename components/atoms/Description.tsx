@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 interface DescriptionProps {
     title: string;
     details: string;

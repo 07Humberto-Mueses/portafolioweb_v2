@@ -8,10 +8,12 @@ import ThemeToggle from "../molecules/ThemeToggle";
 import { useState } from "react";
 import Button from "../atoms/Button";
 import { MenuIcon } from "../icons/Icons";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Header() {
     const pathname = usePathname();
     const [menuOpen, setMenuOpen] = useState(false);
+    const { lang } = useLanguage();
 
     return (
         <header className="fixed inset-x-0 top-0 w-full flex items-center justify-between px-4 sm:px-6 py-2 z-50 bg-[#FFFFFF] dark:bg-[#28251F]">
@@ -34,7 +36,7 @@ export default function Header() {
 
             <div className="flex-1 text-center md:hidden">
                 <span className="maven-pro font-bold text-sm text-[#E45F11]">
-                    {menuData.find((item) => item.path === pathname)?.name || ""}
+                    {menuData.find((item) => item.path === pathname)?.name[lang] || ""}
                 </span>
             </div>
             <nav className="hidden md:flex items-center gap-8 mr-10">
@@ -47,7 +49,7 @@ export default function Header() {
                             : "text-[#131313] dark:text-[#FFFFFF] hover:text-[#E45F11]"
                             }`}
                     >
-                        {item.name}
+                        {item.name[lang]}
                     </Link>
                 ))}
             </nav>
@@ -76,7 +78,7 @@ export default function Header() {
                                 : "text-[#131313] dark:text-[#FFFFFF] hover:text-[#E45F11]"
                                 }`}
                         >
-                            {item.name}
+                            {item.name[lang]}
                         </Link>
                     ))}
                 </div>

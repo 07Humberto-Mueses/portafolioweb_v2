@@ -6,17 +6,42 @@ import Description from "../atoms/Description";
 import { MoreIcon } from "../icons/Icons";
 import Button from "../atoms/Button";
 import ProfessionalModal from "./ProfessionalModal";
+import { useLanguage } from "@/context/LanguageContext";
 
 type ProfessionalSectionProps = {
     titulo: string;
     imagen: string[];
     tecnologias: string[];
     repositorio: string;
-    detalles: Record<string, string>[];
+    detalles: Record<string, { ES: string; EN: string}>[];
 }
 
 export default function ProfessionalSection({ titulo, imagen, tecnologias, repositorio, detalles }: ProfessionalSectionProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const { lang } = useLanguage();
+
+    const translate = {
+        "title": {
+            "ES": "Titulo",
+            "EN": "Title"
+        },
+        "technologies": {
+            "ES": "Tecnologias",
+            "EN": "Technologies"
+        },
+        "repository": {
+            "ES": "Repositorio",
+            "EN": "Repository"
+        }
+    }
+
+    const modalData = { 
+        titulo: { ES: titulo, EN: titulo }, 
+        imagen, 
+        tecnologias, 
+        repositorio, 
+        detalles
+    };
 
     return (
         <div className="fleflex flex-col md:flex-row md:items-center md:px-28 gap-6x items-center justify-between px-28 py-6">
@@ -26,15 +51,15 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, repos
                 />
                 <div className="flex flex-row text-left gap-6 flex-1 px-4">
                     <Description
-                        title="Titulo"
+                        title={translate.title[lang]}
                         details={titulo}
                     />
                     <Description
-                        title="Tecnologias"
+                        title={translate.technologies[lang]}
                         details={tecnologias.join(" | ")}
                     />
                     <Description
-                        title="Repositorio"
+                        title={translate.repository[lang]}
                         details={repositorio}
                     />
                 </div>
@@ -79,13 +104,7 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, repos
             <ProfessionalModal
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
-                data={{
-                    titulo,
-                    imagen,
-                    tecnologias,
-                    repositorio,
-                    detalles
-                }}
+                data={modalData}
             />
         </div>
     )
