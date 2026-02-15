@@ -3,21 +3,24 @@
 import { useState } from "react";
 import ProfessionalCard from "../molecules/ProfessionalCard";
 import Description from "../atoms/Description";
-import { MoreIcon } from "../icons/Icons";
+import { GitHubIcon, MoreIcon } from "../icons/Icons";
 import Button from "../atoms/Button";
 import ProfessionalModal from "./ProfessionalModal";
 import { useLanguage } from "@/context/LanguageContext";
+import RequestAccessForm from "./RequestAccesForm";
 
 type ProfessionalSectionProps = {
     titulo: string;
     imagen: string[];
     tecnologias: string[];
+    despliegue: string;
     repositorio: string;
-    detalles: Record<string, { ES: string; EN: string}>[];
+    detalles: Record<string, { ES: string; EN: string }>[];
 }
 
-export default function ProfessionalSection({ titulo, imagen, tecnologias, repositorio, detalles }: ProfessionalSectionProps) {
+export default function ProfessionalSection({ titulo, imagen, tecnologias, despliegue, repositorio, detalles }: ProfessionalSectionProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const [isSecondOpen, setIsSecondOpen] = useState(false);
     const { lang } = useLanguage();
 
     const translate = {
@@ -29,17 +32,18 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, repos
             "ES": "Tecnologias",
             "EN": "Technologies"
         },
-        "repository": {
-            "ES": "Repositorio",
-            "EN": "Repository"
+        "deploy": {
+            "ES": "Despliegue",
+            "EN": "Deployment"
         }
     }
 
-    const modalData = { 
-        titulo: { ES: titulo, EN: titulo }, 
-        imagen, 
-        tecnologias, 
-        repositorio, 
+    const modalData = {
+        titulo: { ES: titulo, EN: titulo },
+        imagen,
+        tecnologias,
+        despliegue,
+        repositorio,
         detalles
     };
 
@@ -59,16 +63,23 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, repos
                         details={tecnologias.join(" | ")}
                     />
                     <Description
-                        title={translate.repository[lang]}
-                        details={repositorio}
+                        title={translate.deploy[lang]}
+                        details={despliegue}
                     />
                 </div>
                 <div className="flex items-center gap-2">
-                    <Button
-                        bgColor=""
-                        icon={MoreIcon}
-                        onClick={() => setIsOpen(true)}
-                    />
+                    <div className="flex flex-col items-center gap-1 px-8">
+                        <Button
+                            bgColor=""
+                            icon={GitHubIcon}
+                            onClick={() => setIsSecondOpen(true)}
+                        />
+                        <Button
+                            bgColor=""
+                            icon={MoreIcon}
+                            onClick={() => setIsOpen(true)}
+                        />
+                    </div>
                     <div className="w-1 h-45 bg-[#FFFFFF]"></div>
                 </div>
             </div>
@@ -89,14 +100,21 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, repos
                         details={tecnologias.join(" | ")}
                     />
                     <Description
-                        title="Repositorio"
-                        details={repositorio}
+                        title={translate.deploy[lang]}
+                        details={despliegue}
                     />
-                    <Button
-                        bgColor=""
-                        icon={MoreIcon}
-                        onClick={() => setIsOpen(true)}
-                    />
+                    <div className="flex flex-row items-center gap-2 px-8">
+                        <Button
+                            bgColor=""
+                            icon={GitHubIcon}
+                            onClick={() => setIsSecondOpen(true)}
+                        />
+                        <Button
+                            bgColor=""
+                            icon={MoreIcon}
+                            onClick={() => setIsOpen(true)}
+                        />
+                    </div>
                 </div>
                 <div className="w-full h-1 bg-[#FFFFFF] dark:bg-[#C6C7C0] rounded-md"></div>
             </div>
@@ -104,6 +122,11 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, repos
             <ProfessionalModal
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
+                data={modalData}
+            />
+            <RequestAccessForm
+                isOpen={isSecondOpen}
+                onClose={() => setIsSecondOpen(false)}
                 data={modalData}
             />
         </div>

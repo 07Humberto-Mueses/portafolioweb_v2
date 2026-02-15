@@ -13,6 +13,7 @@ export default function page() {
           titulo={proyecto.titulo[lang]}
           imagen={proyecto.imagen || []}
           tecnologias={proyecto.tecnologias || []}
+          despliegue={proyecto.despliegue || ''}
           repositorio={proyecto.repositorio || ''}
           detalles={proyecto.detalles || []}
         />

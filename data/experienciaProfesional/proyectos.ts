@@ -11,6 +11,7 @@ export const proyectos = [
             "React",
             "MySQL"
         ],
+        despliegue: "Proyecto desplegado localmente en la empresa, no se encuentra disponible en la web",
         repositorio: "https://github.com/07Humberto-Mueses/Acueducto",
         detalles: [
             {
@@ -163,6 +164,7 @@ export const proyectos = [
             "Clerk",
             "DiceBear"
         ],
+        despliegue: "https://mentamatica-version-prueba.vercel.app/",
         repositorio: "https://github.com/07Humberto-Mueses/mentamatica_app",
         detalles: [
             {
@@ -232,6 +234,7 @@ export const proyectos = [
             "TailwindCSS",
             "React"
         ],
+        despliegue: "https://proyecto-clinica-fatima.vercel.app/login",
         repositorio: "https://github.com/07Humberto-Mueses/proyecto-clinica-fatima",
         detalles: [
             {

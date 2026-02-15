@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className="fixed inset-x-0 bottom-0 w-full z-50">
-      <div className="absolute left-2 sm:left-3 -top-16 sm:-top-18">
+      <div className="absolute left-2 sm:left-3 -top-14 sm:-top-16 pl-2">
         <Button
           text={lang}
           bgColor="bg-[#131313] dark:bg-[#D9D9D9]"

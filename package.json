@@ -12,8 +12,10 @@
     "flowbite": "^4.0.1",
     "framer-motion": "^12.23.26",
     "next": "16.0.7",
+    "nodemailer": "^8.0.1",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "resend": "^6.9.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
