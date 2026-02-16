@@ -15,20 +15,29 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
+  // Al montar, leer preferencia guardada o del sistema
   useEffect(() => {
     setMounted(true);
-    // Leer el tema del localStorage o usar preferencia del sistema
-    const savedTheme = localStorage.getItem("theme") as Theme;
-    const initialTheme = savedTheme || "light";
-    
-    setTheme(initialTheme);
-    document.documentElement.classList.toggle("dark", initialTheme === "dark");
+
+    const savedTheme = localStorage.getItem("theme") as Theme | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
   }, []);
 
+  // Cada vez que cambia el tema, actualizar clase en <html> y guardar en localStorage
   useEffect(() => {
     if (!mounted) return;
-    
-    document.documentElement.classList.toggle("dark", theme === "dark");
+
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
     localStorage.setItem("theme", theme);
   }, [theme, mounted]);
 

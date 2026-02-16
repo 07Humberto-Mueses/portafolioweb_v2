@@ -3,7 +3,7 @@
 import { useState } from "react";
 import ProfessionalCard from "../molecules/ProfessionalCard";
 import Description from "../atoms/Description";
-import { GitHubIcon, MoreIcon } from "../icons/Icons";
+import { GitHubExperienciaIcon, GitHubIcon, MoreIcon } from "../icons/Icons";
 import Button from "../atoms/Button";
 import ProfessionalModal from "./ProfessionalModal";
 import { useLanguage } from "@/context/LanguageContext";
@@ -71,7 +71,7 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, despl
                     <div className="flex flex-col items-center gap-1 px-8">
                         <Button
                             bgColor=""
-                            icon={GitHubIcon}
+                            icon={GitHubExperienciaIcon}
                             onClick={() => setIsSecondOpen(true)}
                         />
                         <Button
@@ -80,7 +80,7 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, despl
                             onClick={() => setIsOpen(true)}
                         />
                     </div>
-                    <div className="w-1 h-45 bg-[#FFFFFF]"></div>
+                    <div className="w-1 h-45 bg-[#000000] dark:bg-[#FFFFFF]"></div>
                 </div>
             </div>
 
@@ -106,7 +106,7 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, despl
                     <div className="flex flex-row items-center gap-2 px-8">
                         <Button
                             bgColor=""
-                            icon={GitHubIcon}
+                            icon={GitHubExperienciaIcon}
                             onClick={() => setIsSecondOpen(true)}
                         />
                         <Button
@@ -116,7 +116,7 @@ export default function ProfessionalSection({ titulo, imagen, tecnologias, despl
                         />
                     </div>
                 </div>
-                <div className="w-full h-1 bg-[#FFFFFF] dark:bg-[#C6C7C0] rounded-md"></div>
+                <div className="w-full h-1 bg-[#000000] dark:bg-[#FFFFFF] rounded-md"></div>
             </div>
 
             <ProfessionalModal

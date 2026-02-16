@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../atoms/Button";
 import { CloseIcon, SendIcon } from "../icons/Icons";
 
@@ -24,6 +24,18 @@ export default function RequestAccessForm({ isOpen, onClose, data }: ProjectModa
     name: "",
     email: "",
   });
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [showMessage, setShowMessage] = useState(false);
+
+  useEffect(() => {
+    if (showMessage) {
+      const timer = setTimeout(() => {
+        setShowMessage(false);
+        setStatus("idle");
+      }, 3000)
+      return () => clearTimeout(timer);
+    }
+  }, [showMessage]);
 
   if (!isOpen) return null;
 
@@ -32,6 +44,8 @@ export default function RequestAccessForm({ isOpen, onClose, data }: ProjectModa
     namePlaceholder: { ES: "Nombre completo", EN: "Full Name" },
     emailPlaceholder: { ES: "Correo electrónico", EN: "Email Address" },
     submit: { ES: "Solicitar", EN: "Request" },
+    success: { ES: "Solicitud enviada correctamente.", EN: "Request sent successfully." },
+    error: { ES: "Error al enviar la solicitud.", EN: "Error sending request." },
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,13 +57,25 @@ export default function RequestAccessForm({ isOpen, onClose, data }: ProjectModa
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await fetch("/api/send-request", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name: formData.name, email: formData.email, project: data.titulo[lang] }),
-    });
-  };
+    try {
+      const res = await fetch("/api/send-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: formData.name, email: formData.email, project: data.titulo[lang] }),
+      });
 
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "" });
+      } else {
+        setStatus("error");
+      }
+      setShowMessage(true);
+    } catch (error) {
+      setStatus("error");
+      setShowMessage(true);
+    }
+  };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[#C6C7C0]/90 dark:bg-[#131313]/90 z-50">
@@ -91,6 +117,11 @@ export default function RequestAccessForm({ isOpen, onClose, data }: ProjectModa
               icon={SendIcon}
             />
           </div>
+          {showMessage && (
+            <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 px-6 py-4 rounded-lg shadow-lg transition-opacity duration-500 ${status === "success" ? "bg-green-600 text-white text-xl" : "bg-red-600 text-white text-xl"}`} >
+              {status === "success" ? translations.success[lang] : translations.error[lang]}
+            </div>
+          )}
         </div>
       </form>
     </div>
