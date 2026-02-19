@@ -19,14 +19,14 @@ export default function Header() {
         <header className="fixed inset-x-0 top-0 w-full flex items-center justify-between px-4 sm:px-6 py-2 z-50 bg-[#FFFFFF] dark:bg-[#28251F]">
             <Link href="/">
                 <Image
-                    src="/LOGO.png"
+                    src="/LOGO_DARK.png"
                     alt="Logo"
                     width={70}
                     height={70}
                     className="m-3 sm:m-3 dark:hidden"
                 />
                 <Image
-                    src="/LOGO_DARK.png"
+                    src="/LOGO.png"
                     alt="Logo Oscuro"
                     width={70}
                     height={70}

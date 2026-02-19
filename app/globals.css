@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Maven+Pro:wght@400&display=swap');
 @import "tailwindcss";
-@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root { 
   --background: #C6C7C0;
